@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri Gunung</title>
+
+<style>
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#f2f2f2;
+        display:flex;
+        justify-content:center;
+    }
+
+    .container{
+        width:876px;
+        background:#fff;
+        box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
+
+    /* BANNER */
+    .banner{
+        position:relative;
+    }
+
+    .banner img{
+        width:100%;
+        height:140px;
+        display:block;
+    }
+
+    /* CLOCK */
+    .clock{
+        position:absolute;
+        right:15px;
+        top:15px;
+        background:rgba(0,0,0,0.6);
+        color:#fff;
+        padding:8px 12px;
+        border-radius:8px;
+        font-weight:bold;
+        font-size:14px;
+    }
+
+    /* MENU */
+    .menu{
+        background:#123456;
+        text-align:center;
+        padding:12px;
+    }
+
+    .menu a{
+        color:white;
+        text-decoration:none;
+        margin:0 15px;
+        font-weight:bold;
+        display:inline-block;
+    }
+
+    .menu a:hover{
+        color:#7EC1EB;
+    }
+
+    /* CONTENT */
+    .content{
+        padding:25px;
+        text-align:center;
+    }
+
+    .content h1{
+        font-family:Helvetica, sans-serif;
+        margin-bottom:20px;
+    }
+
+    /* GALLERY */
+    .gallery{
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        gap:15px;
+        margin-top:20px;
+    }
+
+    .card{
+        background:#fff;
+        border-radius:10px;
+        overflow:hidden;
+        box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:scale(1.05);
+        box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .card img{
+        width:100%;
+        height:140px;
+        object-fit:cover;
+        display:block;
+    }
+
+    .card p{
+        padding:10px;
+        font-weight:bold;
+        margin:0;
+    }
+
+    .lihat-juga{
+        margin-top:30px;
+    }
+
+    .lihat-juga a{
+        font-weight:bold;
+        text-decoration:none;
+        color:#222;
+    }
+
+    .lihat-juga a:hover{
+        color:#7EC1EB;
+    }
+
+    footer{
+        text-align:center;
+        color: #fff;
+        background:#123456;
+        padding:20px;
+        font-weight:bold;
+        margin-top:20px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+        .container{
+            width:100%;
+        }
+        .gallery{
+            grid-template-columns:repeat(2, 1fr);
+        }
+    }
+
+    @media(max-width:600px){
+        .gallery{
+            grid-template-columns:1fr;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- BANNER -->
+    <div class="banner">
+        <img src="gambar/banner.jpg" alt="Banner">
+        <div class="clock" id="clock">00:00:00</div>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <a href="index.html">Beranda</a>
+        <a href="Galeri.html">Galeri</a>
+        <a href="Kontak.html">Kontak</a>
+        <a href="Tentang Kami.html">Tentang Kami</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <h1>Galeri 7 Gunung Tertinggi </h1>
+
+        <div class="gallery">
+
+            <div class="card">
+                <img src="gambar/puncakjaya.jpeg">
+                <p>Puncak Jaya (Carstensz Pyramid)</p>
+            </div>
+
+            <div class="card">
+                <img src="gambar/kerinci.jpg">
+                <p>Kerinci</p>
+            </div>
+
+            <div class="card">
+                <img src="gambar/Rinjani.jpg">
+                <p>Rinjani</p>
+            </div>
+
+            <div class="card">
+                <img src="gambar/semeru.jpg">
+                <p>Semeru</p>
+            </div>
+
+            <div class="card">
+                <img src="gambar/Bukit Raya.png">
+                <p>Bukit Raya</p>
+            </div>
+
+            <div class="card">
+                <img src="gambar/Latimojong.jpg" >
+                <p>Latimojong</p>
+            </div>
+
+            <div class="card">
+                <img src="gambar/Binaiya.jpg">
+                <p>Binaiya</p>
+            </div>
+
+        </div>
+
+        <div class="lihat-juga">
+            <h3>Lihat Juga:</h3>
+            <a href="Daftar Gunung Di Jawa Barat.html">Daftar Gunung di Jawa Barat</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Muhammad Dwi Ramandhika • Pemrograman Web 1
+    </footer>
+
+</div>
+
+<!-- JS CLOCK -->
+<script>
+function updateClock(){
+    const now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+
+    h = h < 10 ? "0" + h : h;
+    m = m < 10 ? "0" + m : m;
+    s = s < 10 ? "0" + s : s;
+
+    document.getElementById("clock").innerText = h + ":" + m + ":" + s;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>

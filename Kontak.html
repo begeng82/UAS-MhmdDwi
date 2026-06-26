@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#f2f2f2;
+      display:flex;
+      justify-content:center;
+    }
+
+    .container{
+      width:876px;
+      background:#fff;
+      box-shadow:0 0 10px rgba(0,0,0,0.2);
+      text-align:center;
+    }
+
+    .banner img{
+      width:100%;
+      height:140px;
+      display:block;
+    }
+
+    /* MENU */
+    .menu{
+        background:#123456;
+        text-align:center;
+        padding:12px;
+    }
+
+
+    .menu a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+      display:inline-block;
+    }
+
+    .menu a:hover{
+      color:#7EC1EB;
+    }
+
+    .content{
+      padding:30px;
+      text-align:center;
+    }
+
+    .content h1, .content h2{
+      font-family:Helvetica, sans-serif;
+      text-align:center;
+    }
+
+    .content img{
+      width:300px;
+      height:200px;
+      border-radius:10px;
+      margin-top:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .content p{
+      font-size:18px;
+      color:#444;
+      line-height:1.6;
+      margin-top:15px;
+      text-align:center;
+    }
+
+    .profile{
+      background:#f9f9f9;
+      padding:20px;
+      margin:20px auto;
+      border-radius:10px;
+      display:inline-block;
+      text-align:left;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .form-box{
+      margin-top:30px;
+      background:#f9f9f9;
+      padding:20px;
+      border-radius:10px;
+      display:inline-block;
+      text-align:center;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, textarea{
+      width:300px;
+      padding:10px;
+      margin-top:5px;
+      margin-bottom:10px;
+      border:1px solid #ccc;
+      border-radius:5px;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    button{
+      width:300px;
+      padding:10px;
+      background:#7EC1EB;
+      border:none;
+      color:white;
+      font-weight:bold;
+      border-radius:5px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#4fa3d1;
+    }
+
+    .clock{
+      margin-bottom:10px;
+      display:block;
+      background:#222;
+      color:white;
+      padding:8px;
+      border-radius:8px;
+      font-weight:bold;
+      text-align:center;
+      width:200px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    footer{
+        text-align:center;
+        color: #fff;
+        background:#123456;
+        padding:20px;
+        font-weight:bold;
+        margin-top:20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Banner -->
+    <div class="banner">
+        <img src="gambar/banner.jpg" alt="Banner">
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <a href="index.html">Beranda</a>
+        <a href="Galeri.html">Galeri</a>
+        <a href="Kontak.html">Kontak</a>
+        <a href="Tentang Kami.html">Tentang Kami</a>
+    </div>
+
+    <!-- Content -->
+<div class="form-box">
+
+<div class="clock" id="clock">00:00:00</div>
+
+    <h3>Hubungi Kami</h3>
+
+    <form>
+    <input type="text" placeholder="Masukkan Nama">
+    <input type="email" placeholder="Masukkan Email">
+    <textarea rows="4" placeholder="Tulis pesan..."></textarea>
+
+    <button type="submit">Kirim</button>
+    </form>
+
+</div>
+
+
+<div>
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Muhammad Dwi Ramandhika • Pemrograman Web 1
+    </footer>
+
+</div>
+
+<script>
+function updateClock(){
+  const now = new Date();
+  let h = now.getHours();
+  let m = now.getMinutes();
+  let s = now.getSeconds();
+
+  h = h < 10 ? "0" + h : h;
+  m = m < 10 ? "0" + m : m;
+  s = s < 10 ? "0" + s : s;
+
+  document.getElementById("clock").innerText = h + ":" + m + ":" + s;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>

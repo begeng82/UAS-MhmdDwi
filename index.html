@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gunung Rinjani</title>
+
+<style>
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#f2f2f2;
+        display:flex;
+        justify-content:center;
+    }
+
+    .container{
+        width:876px;
+        background:#fff;
+        box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
+
+    /* BANNER */
+    .banner{
+        position:relative;
+    }
+
+    .banner img{
+        width:100%;
+        height:140px;
+        display:block;
+    }
+
+    .clock{
+        position:absolute;
+        right:15px;
+        top:15px;
+        background:rgba(0,0,0,0.6);
+        color:#fff;
+        padding:8px 12px;
+        border-radius:8px;
+        font-weight:bold;
+        font-size:14px;
+    }
+
+    /* MENU */
+    .menu{
+        background:#123456;
+        text-align:center;
+        padding:12px;
+    }
+
+    .menu a{
+        color:white;
+        text-decoration:none;
+        margin:0 15px;
+        font-weight:bold;
+        display:inline-block;
+    }
+
+    .menu a:hover{
+        color:#7EC1EB;
+    }
+
+    /* CONTENT */
+    .content{
+        padding:25px;
+        text-align:center;
+    }
+
+    .content h1{
+        font-family:Helvetica, sans-serif;
+        margin-bottom:20px;
+    }
+
+    .content p{
+        text-align:justify;
+        font-size:18px;
+        line-height:1.6;
+        color:#444;
+        margin-bottom:15px;
+        text-align:left;
+    }
+
+    .content img{
+        width:320px;
+        height:250px;
+        margin:20px auto;
+        display:block;
+        border-radius:10px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.2);
+        
+    }
+
+    .lihat-juga{
+        margin-top:30px;
+    }
+
+    .lihat-juga a{
+        color:#222;
+        font-weight:bold;
+        text-decoration:none;
+    }
+
+    .lihat-juga a:hover{
+        color:#7EC1EB;
+    }
+
+    footer{
+        text-align:center;
+        color: #fff;
+        background:#123456;
+        padding:20px;
+        font-weight:bold;
+        margin-top:20px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Banner + Jam -->
+    <div class="banner">
+        <img src="gambar/banner.jpg" alt="banner">
+
+        <div class="clock" id="clock">00:00:00</div>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <a href="index.html">Beranda</a>
+        <a href="Galeri.html">Galeri</a>
+        <a href="Kontak.html">Kontak</a>
+        <a href="Tentang Kami.html">Tentang Kami</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <h1>7 Gunung Tertinggi</h1>
+
+        <p>
+            Indonesia dengan total 629 gunung memiliki tujuh puncak tertinggi yang paling terkenal. Tujuh puncak ini kemudian disebut dengan istilah The Seven Summits of Indonesia.
+            Seperti diketahui, Indonesia dijuluki sebagai ring of fire karena memiliki 13 persen gunung api di dunia. Ada 129 gunung berstatus aktif dan 500 gunung tidak aktif.
+        </p>
+
+        <img src="gambar/7summit.jpg" alt="7summit" alt="7summit" align="right" hspace="10">
+
+        <p>
+            Pada umumnya, puncak-puncak gunung tersebut masuk dalam The Seven Summits of Indonesia. Melansir dari laman Kementerian Kehutanan, The Seven of Summits Indonesia merupakan puncak-puncak gunung tertinggi yang mewakili tujuh pulau besar dan wilayah kepulauan di Indonesia: puncak Kerinci (Pulau Sumatera), puncak Semeru (Pulau Jawa), Puncak Bukit Raya (Pulau Kalimantan), Puncak Rinjani (Kepulauan Sunda Kecil), Puncak Binaiya (Kepulauan Maluku ), Puncak Latimojong (Pulau Sulawesi), dan Puncak Cartenz (Pulau Papua).
+        </p>
+
+        <p>
+            Puncak tertinggi dari The Seventh Summits berada di Puncak Cartensz, Papua. Secara keseluruhan puncak tertinggi juga berada di Papua lantaran puncak gunung mereka rata-rata berada di ketinggian lebih dari 4000 mdpl.
+        </p>
+
+        <div class="lihat-juga">
+            <h3>Lihat Juga:</h3>
+            <a href="Daftar Gunung Di Jawa Barat.html">Daftar Gunung Di Jawa Barat</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Muhammad Dwi Ramandhika • Pemrograman Web 1
+    </footer>
+
+</div>
+
+<script>
+function updateClock(){
+    const now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+
+    h = h < 10 ? "0" + h : h;
+    m = m < 10 ? "0" + m : m;
+    s = s < 10 ? "0" + s : s;
+
+    document.getElementById("clock").innerText = h + ":" + m + ":" + s;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>

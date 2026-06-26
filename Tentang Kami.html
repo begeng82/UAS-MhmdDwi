@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang Kami</title>
+
+<style>
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#f2f2f2;
+        display:flex;
+        justify-content:center;
+    }
+
+    .container{
+        width:876px;
+        background:#fff;
+        box-shadow:0 0 10px rgba(0,0,0,0.2);
+        text-align:center;
+    }
+
+    /* BANNER */
+    .banner{
+        position:relative;
+    }
+
+    .banner img{
+        width:100%;
+        height:140px;
+        display:block;
+    }
+
+    .clock{
+        position:absolute;
+        right:15px;
+        top:15px;
+        background:rgba(0,0,0,0.6);
+        color:#fff;
+        padding:8px 12px;
+        border-radius:8px;
+        font-weight:bold;
+        font-size:14px;
+    }
+
+    /* MENU */
+    .menu{
+        background:#123456;
+        text-align:center;
+        padding:12px;
+    }
+
+
+    .menu a{
+        color:white;
+        text-decoration:none;
+        margin:0 15px;
+        font-weight:bold;
+        display:inline-block;
+    }
+
+    .menu a:hover{
+        color:#7EC1EB;
+    }
+
+    /* CONTENT */
+    .content{
+        padding:30px;
+    }
+
+    .content h1, .content h2{
+        font-family:Helvetica, sans-serif;
+    }
+
+    .content img{
+        width:300px;
+        height:200px;
+        border-radius:10px;
+        margin-top:10px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .content p{
+        font-size:18px;
+        color:#444;
+        line-height:1.6;
+        margin-top:15px;
+    }
+
+    /* PROFILE */
+    .profile{
+        background:#f9f9f9;
+        padding:20px;
+        margin:20px auto;
+        border-radius:10px;
+        display:inline-block;
+        text-align:left;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    footer{
+        text-align:center;
+        color: #fff;
+        background:#123456;
+        padding:20px;
+        font-weight:bold;
+        margin-top:20px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- BANNER + JAM -->
+    <div class="banner">
+        <img src="gambar/banner.jpg" alt="Banner">
+        <div class="clock" id="clock">00:00:00</div>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <a href="index.html">Beranda</a>
+        <a href="Galeri.html">Galeri</a>
+        <a href="Kontak.html">Kontak</a>
+        <a href="Tentang Kami.html">Tentang Kami</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <h2>Tentang Website</h2>
+
+        <img src="gambar/FOTO DWI.jpeg" alt="Gunung Rinjani">
+
+        <p>
+            Website ini dibuat untuk memberikan informasi dan gambaran singkat mengenai keindahan serta sejarah 7 Gunung Tertinggi.
+        </p>
+
+        <p>
+             7 Gunung Tertinggi menjadi destinasi wisata alam yang banyak dikunjungi oleh pendaki dari seluruh Indonesia.
+        </p>
+
+        <div class="profile">
+            Nama: <b>Muhammad Dwi Ramandhika</b><br>
+            NIM: <b>251011750134</b><br>
+            Mata Kuliah: Pemrograman Web 1<br>
+            Tahun: 2026<br>
+            Sumber: Wikipedia & dokumentasi alam
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Muhammad Dwi Ramandhika • Pemrograman Web 1
+    </footer>
+
+</div>
+
+<!-- JS CLOCK -->
+<script>
+function updateClock(){
+    const now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+
+    h = h < 10 ? "0" + h : h;
+    m = m < 10 ? "0" + m : m;
+    s = s < 10 ? "0" + s : s;
+
+    document.getElementById("clock").innerText =
+        h + ":" + m + ":" + s;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>
